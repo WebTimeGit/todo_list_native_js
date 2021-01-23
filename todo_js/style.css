@@ -1,0 +1,141 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: auto;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	scroll-behavior: smooth;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    background: #9E9898;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited, a:focus, a:active, a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+p {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 24px;
+	color: #9E9898;
+}
+
+/*--------------------*/
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+
+}
+
+.todo_wrapper {
+    max-width: 500px;
+    min-height: 500px;
+    margin: 50px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    background: aliceblue;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+	"header"
+	"body"
+	"footer";
+}
+
+.todo_header {
+    position: relative;
+	grid-area: header;
+}
+.todo_body {
+	grid-area: body;
+	border: 1px solid #9E9898;
+	margin: 25px 0;
+}
+.todo_in {
+	padding: 5px;
+	min-width: 65%;
+}
+.todo_in.error {
+	box-shadow: 0 0 5px red;
+}
+.todo_btn {
+	padding: 5px;
+	background: aquamarine;
+	width: 30%;
+}
+.todo_footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: flex-end;
+}
+.clear_todo {
+	background: red;
+	color: azure;
+	padding: 5px;
+}
+
+.todo_body .liItem {
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 10px;
+	margin: 10px 0;
+}
+
+.liItem.important {
+	background: red;
+}
+.liItem.complete {
+	background: green;
+}
+.liItem.hidden {
+	background: orange;
+}
+.btnDel {
+	float: right;
+	height: 100%;
+	width: 30px;
+	background: transparent;
+	position: relative;
+	right: -10px;
+	color: red;
+	font-weight: 900;
+	font-size: 16px;
+}
+
+.btnImportant {
+	padding: 5px;
+}
+.remove_input {
+	display: none;
+}
+
+.labelItem {
+	cursor: pointer;
+}
+
+
+
